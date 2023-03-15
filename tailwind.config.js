@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily} =require("tailwindcss/defaultTheme")
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -9,16 +11,16 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily:{
-      sans: ['var(--font-questrial)'],
-  },
+  
     extend: {
       colors: {
         'primary': '#212529',
         'accent':'#FE4848',
         'secondary-text':'#545759'
       },
-    
+      fontFamily:{
+        sans: ['var(--font-questrial)',...fontFamily.sans],
+    },
       
     },
   },
