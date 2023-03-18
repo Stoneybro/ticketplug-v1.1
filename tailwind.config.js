@@ -16,12 +16,12 @@ module.exports = {
       colors: {
         'primary': '#212529',
         'accent':'#FE4848',
-        'secondary-text':'#545759'
+        'secondary-text':'#545759',
+        'border-color':'rgba(107, 110, 112, 0.5)',
       },
       fontFamily:{
-        sans: ['var(--font-questrial)',...fontFamily.sans],
+        redhat: ['var(--font-red_hat)',...fontFamily.sans]
     },
-      
     },
   },
   plugins: [],

@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.btnprimary{
+    @apply text-accent hover:text-white hover:bg-accent  py-[0.4rem] px-7 text-sm rounded-3xl border-accent border-[1.5px];
+}
