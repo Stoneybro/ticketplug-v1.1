@@ -8,7 +8,7 @@ const login = () => {
   return (
    <>
    <Nav />
-   <div className='flex justify-center items-center font-Gilroy text-black  h-screen'>
+   <div className='flex justify-center items-center  text-black  h-screen'>
  
  <form className='flex flex-col w-96 gap-8 mt-18'>
    <h1 className='text-4xl text-center font-BebasNeuebold mb-4'>LOGIN</h1>
