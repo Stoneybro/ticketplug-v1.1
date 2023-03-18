@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const { fontFamily} =require("tailwindcss/defaultTheme")
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -19,9 +19,7 @@ module.exports = {
         'secondary-text':'#545759',
         'border-color':'rgba(107, 110, 112, 0.5)',
       },
-      fontFamily:{
-        redhat: ['var(--font-red_hat)',...fontFamily.sans]
-    },
+
     },
   },
   plugins: [],
