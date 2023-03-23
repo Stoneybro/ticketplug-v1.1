@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from './Card'
-
+import axios from '@/lib/axios'
+import { useSession } from 'next-auth/react'
 const Cardcontainer = () => {
+  const [trending,setTrending]=useState('')
+  const {data:session}=useSession()
+  useEffect(()=>{
+    console.log(session);
+    const fetch= async()=>{
+      if (session) {
+        try {
+          const response=axios.get('trending-events/')
+          setTrending(response)
+        } catch (error) {
+          console.log(error);
+        }
+        
+        
+      }else{
+        console.log('user isnt authenticated');
+      }
+    }
+    fetch()
+  },[])
   return (
     <div className=' mx-auto max-w-[1040.64px] py-[6.5rem] flex flex-col justify-center'>
         <div>

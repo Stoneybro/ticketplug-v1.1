@@ -7,10 +7,12 @@ import Nav from '@/components/nav'
 import Cardcontainer from '@/components/Cardcontainer'
 import Subscribe from '@/components/Subscribe'
 import Footer from '@/components/Footer'
-
+import Layout from '@/components/layout'
+import { useSession } from 'next-auth/react'
 
 export default function Home() {
-  console.log(Logo);
+
+
   return (
     <>
       <Head>
@@ -19,11 +21,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <Layout>
       <Header />
       <Cardcontainer />
       <Subscribe />
-      <Footer />
+      </Layout>
      </>
   )
 }

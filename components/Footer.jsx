@@ -5,7 +5,7 @@ const Footer = () => {
     <footer>
         <div className='bg-black text-sm'>
     <div className=' flex mx-auto pt-[4.5rem] pb-12 text-white items-start gap-36 max-w-[1040.64px] '>
-    <Image src="./images/ticket-logo.svg" width={150} height={150} placeholder='blur' blurDataURL='./images/ticket-logo.svg'  />
+    <Image src="./images/ticket-logo.svg" width={150} height={150} placeholder='blur' alt='logo' blurDataURL='./images/ticket-logo.svg'  />
       <div className='flex flex-col gap-3'>
         <div>Help</div>
         <div>About</div>

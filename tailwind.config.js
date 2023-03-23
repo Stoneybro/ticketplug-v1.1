@@ -20,8 +20,7 @@ module.exports = {
         'border-color':'rgba(107, 110, 112, 0.5)',
       },
       fontFamily: {
-        primary: ['var(--lora-font)', ...fontFamily.sans],
-        serif: ['var(--lora-font)', ...fontFamily.serif],
+        primary: ['var(--poppins)'],
       },
     },
   },

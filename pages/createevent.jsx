@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '@/components/layout'
+import { getSession } from 'next-auth/react'
 
 
 
@@ -78,3 +79,19 @@ const createevent = () => {
 }
 
 export default createevent
+
+
+export async function getServerSideProps({req}) {
+    const session=await getSession({req})
+    if (!session) {
+      return{
+        redirect:{
+          destination:'/login',
+          permanent:false
+        }
+      }
+    }
+    return{
+      props:{session}
+    }
+}
