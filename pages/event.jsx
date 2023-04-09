@@ -4,9 +4,11 @@ import Buyticket from '@/components/buyticket'
 import Image from 'next/image'
 import Link from 'next/link'
 import Card from '@/components/Card'
-
+import { useRouter } from 'next/router'
 
 const event = () => {
+  const router=useRouter()
+  const {event}=router.query
   return (
     <Layout>
         <main className='grid grid-cols-[61.5%,38.5%]'>

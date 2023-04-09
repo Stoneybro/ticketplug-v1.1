@@ -1,17 +1,23 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
 import Header from '@/components/header'
-import Logo from '../public/images/ticket-logo.svg'
-import Nav from '@/components/nav'
 import Cardcontainer from '@/components/Cardcontainer'
 import Subscribe from '@/components/Subscribe'
-import Footer from '@/components/Footer'
 import Layout from '@/components/layout'
+import { setSession } from '@/store/slices/authslice'
+import { useDispatch } from 'react-redux'
 import { useSession } from 'next-auth/react'
+import { useEffect } from 'react'
+
+
 
 export default function Home() {
+  const dispatch=useDispatch()
+  const {data:session}=useSession()
 
+useEffect(()=>{
+    dispatch(setSession(session))
+
+},[session])
 
   return (
     <>

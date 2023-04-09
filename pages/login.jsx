@@ -5,14 +5,20 @@ import { useFormik } from 'formik'
 import Link from 'next/link'
 import { useSession,signIn,signOut } from 'next-auth/react'
 
+
 const login = () => {
+
    const handleSignin= async (e)=>{
       e.preventDefault()
       signIn('google',{callbackUrl:'http://localhost:3000'})
    }
 
    const onSubmit= (values) =>{
-      signIn('django',{credentials:values})
+
+       signIn('django',{
+         email:values.email,
+         password:values.password
+       })
    }
    const formik=useFormik({
       initialValues:{
